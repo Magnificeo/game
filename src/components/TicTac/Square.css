@@ -1,0 +1,32 @@
+.square {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.square input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.square__tag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.square:has(input[type="checkbox"]:focus) {
+  outline: 3px solid #e55360;
+  z-index: 1000;
+}
+.square:has(input[type="checkbox"]:focus:not(:focus-visible)) {
+  outline: none;
+}
